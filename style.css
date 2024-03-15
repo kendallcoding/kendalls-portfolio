@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    
+   }
+
+   .wrapper {
+    max-width: 940px;
+    margin: 0 auto;
+  }
+
+  /* My header information */
+ .row-one {
+  grid-column: 1 / 4;
+  grid-row: 1;
+  padding-top: 60px;
+  background-color: darkgray;
+  background-image: url(download.jpeg);
+  font-size: 1.3rem;
+  
+ }
+/* the navigation links on the top right of theh page */
+ .nav-menu {
+    grid-column: 2 / 4;
+    grid-row: 1;
+    text-align: end;
+    padding-top: 60px;
+    background-color: darkgray;
+    background-image: url(download.jpeg);
+    font-size: 1.3rem;
+
+ }
+/* The first row of my portfolio */
+ .main-one {
+    grid-column: 1;
+    grid-row: 3;
+    text-align: center;
+    font-size: 2rem;
+ }
+
+.main-two {
+    grid-column: 1;
+    grid-row: 4;
+    text-align: center;
+    font-size: 2rem;
+} 
+
+/* The main body of my portfolio */
+.detail-one {
+    grid-column: 2 / 4;
+    grid-row: 3;;
+    text-align: center;
+}
+
+.detail-two {
+    grid-column: 2 / 4;
+    grid-row: 4;
+    background-image: url(book.png);
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+/* the footer of my porftolio */
+.footer {
+    grid-column: 1 / 4;
+    grid-row: 5;
+    font-size: 1.3rem;
+    background-color: darkgray;
+    padding-top: 30px;
+    text-align: center;
+    word-spacing: 10px;
+    background-image: url(download.jpeg);
+}
+
+/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+@media screen and (min-width: 768px) {
+    /* on tablets, set columns to only be 50% of the width and not grow */
+    .card-column {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  
+    /* select the last child to grow to full width if it has space to grow */
+    .card-column:last-child {
+      flex-grow: 1;
+    }
+  }
+  
+  /* media query for larger screens */
+  @media screen and (min-width: 992px) {
+    header {
+      width: 75%;
+    }
+  
+    .card-column {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+  }
+  
+
